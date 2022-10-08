@@ -25,14 +25,14 @@ export const MoviePage = () => {
 return (
     <Suspense fallback={<span className="text-center font-bold text-2xl flex justify-center items-center">Loading...</span>}>
         <div className="bg-gray-800">
-        <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} className="h-1/6 transition-opacity  relative " />
+        <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} className="md:h-1/6 transition-opacity  lg:relative w-full" />
         <div className="max-w-7xl lg:absolute md:top-28 md:left-20 ">
             <div className="backdrop-blur-sm lg:bg-white/30 w-full h-max p-3 flex lg:items-center flex-col md:flex-row text-white lg:text-black ">
                 <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} className="w-5/12 lg:w-2/6 hidden md:inline-block " />
                 <div className="text-lg">
                     <div className="text-4xl font-bold lg:text-gray-900 text-center ">{movie.title}</div>
                     <div className="p-3 text-center font-bold">{ movie.tagline }</div>
-                        <div className="flex">
+                        <div className=" lg:flex">
                             <div className="flex space-x-3 px-5"><span className="font-bold">Genre:</span>
                             {movie.genres && movie.genres.map((data) => ( 
                             <p> { data.name }</p>
