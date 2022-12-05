@@ -77,7 +77,7 @@ export const Layout = () => {
                 {data.map((movie,index) => (
                     <div key={index} className="transition-transform duration-200 ease-in-out ">
                         <p className="text-xl md:text-5xl text-red-700 animate-bounce absolute p-3 text-center">{ movie.title.toUpperCase()}</p>
-                        <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} />
+                        <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} loading="eager" />
                     </div>
                 ))}
             </Carousel>
